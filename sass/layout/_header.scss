@@ -9,9 +9,10 @@
   display: flex;
   align-items: center;
 }
-.header-logo {
+.logo {
   font-family: "Raleway";
   font-weight: 700;
+  font-style: bold;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
@@ -21,48 +22,49 @@
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
-.header-logo-logo {
+.logo_color {
   color: var(--header-color);
 }
-.header-logo:hover,
-.header-logo:focus {
-  color: var(--accent-color);
-}
+
+// .header-logo:hover,
+// .header-logo:focus {
+//   color: var(--accent-color);
+// }
 .header-logo-link {
   color: var(--accent-color);
 }
 
-.header-list {
+.header-list-nav {
   display: flex;
   align-items: center;
   margin-left: auto;
 }
 
-.header-list li {
+.header-list-nav li {
   margin-right: 50px;
 }
-.header-list li:last-child {
+.header-list-nav li:last-child {
   margin-right: 0px;
 }
 
-.header-link {
+.header-list-nav__item {
   display: block;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 14px;
   line-height: 1.14;
   padding: 32px 0px;
   color: var(--header-color);
   transition: color var(--transition-duration) var(--transition-timing-function);
+  position: relative;
   /* transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
   transition-property: color; */
-  position: relative;
 }
-.header-link {
+.header-list-nav__item {
   text-decoration: none;
 }
-.header-link:hover,
-.header-link:focus {
+.header-list-nav__item:hover,
+.header-list-nav__item:focus {
   color: var(--accent-color);
 }
 .current {
@@ -78,7 +80,7 @@
   border-radius: 2px;
   display: block;
 }
-.contact {
+.header-contacts-list__link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -88,16 +90,18 @@
   fill: currentColor;
 }
 
-.header-contacts {
+.header-contacts-list {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: auto;
 }
-.header-contacts .header-item + .header-item {
+.header-contacts-list
+  .header-contacts-list__item
+  + .header-contacts-list__item {
   margin-left: 50px;
 }
-.contact.mail {
+.header-contacts-list__link.header-contacts-list__link_mail {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -105,41 +109,45 @@
   transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 
-.contact.mail:hover,
-.contact.mail:focus {
+.header-contacts-list__link.header-contacts-list__link_mail:hover,
+.header-contacts-list__link.header-contacts-list__link_mail:focus {
   color: var(--accent-color);
 }
-.contact.mail:hover .mail-icon {
+.header-contacts-list__link.header-contacts-list__link_mail:hover
+  .header-contacts-list__icon_mail {
   fill: var(--accent-color);
 }
-.contact.mail:focus .mail-icon {
+.header-contacts-list__link.header-contacts-list__link_mail:focus
+  .header-contacts-list__icon_mail {
   fill: var(--accent-color);
 }
-.mail-icon {
+.header-contacts-list__icon_mail {
   height: 12px;
   width: 16px;
   margin-right: 10px;
   fill: currentColor;
   transition: color var(--transition-duration) var(--transition-timing-function);
 }
-.contact.tel {
+.header-contacts-list__link.header-contacts-list__link_tel {
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--text-color);
   transition: fill var(--transition-duration) var(--transition-timing-function);
 }
-.contact.tel:hover,
-.contact.tel:focus {
+.header-contacts-list__link.header-contacts-list__link_tel:hover,
+.header-contacts-list__link.header-contacts-list__link_tel:focus {
   color: var(--accent-color);
 }
-.contact.tel:hover .tel-icon {
+.header-contacts-list__link.header-contacts-list__link_tel:hover
+  .header-contacts-list__icon_tel {
   color: var(--accent-color);
 }
-.contact.tel:focus .tel-icon {
+.header-contacts-list__link.header-contacts-list__link_tel:focus
+  .header-contacts-list__icon_tel {
   color: var(--accent-color);
 }
-.tel-icon {
+.header-contacts-list__icon_tel {
   height: 16px;
   width: 10px;
   margin-right: 10px;
