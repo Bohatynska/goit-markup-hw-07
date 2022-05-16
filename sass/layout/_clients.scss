@@ -15,11 +15,11 @@
   width: 170px;
   height: 92px;
   margin-right: 30px;
-
   border: 1px solid rgba(175, 177, 184, 1);
-}
-.clients-icon-elements:last-child {
-  margin-right: 0px;
+  border-radius: 4px;
+  & :last-child {
+    margin-right: 0px;
+  }
 }
 
 .icon-link {
@@ -33,15 +33,15 @@
   fill: #afb1b8;
   transition: border-color var(--transition-duration)
     var(--transition-timing-function);
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+  }
 }
 .clients-icon-item {
   transition: fill var(--transition-duration) var(--transition-timing-function);
-}
-.icon-link:hover .clients-icon-item,
-.icon-link:focus .clients-icon-item {
-  fill: var(--accent-color);
-}
-.icon-link:hover,
-.icon-link:focus {
-  border-color: var(--accent-color);
+  .icon-link:hover &,
+  .icon-link:focus & {
+    fill: var(--accent-color);
+  }
 }

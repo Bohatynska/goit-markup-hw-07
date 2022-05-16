@@ -8,7 +8,6 @@
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 50px;
-
   color: var(--title-color);
 }
 
@@ -21,14 +20,11 @@
 }
 
 .biz-img {
-  //   flex-basis: calc((100%-60px) / 3);
   width: 370px;
-  /* width: calc(100% / 3 - 30px) */
   position: relative;
-}
-
-.biz-img:not(:last-child) {
-  margin-right: 30px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .biz-cover-text {

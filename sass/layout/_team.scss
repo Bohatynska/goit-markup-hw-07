@@ -13,9 +13,9 @@
 }
 .team-item {
   display: flex;
-}
-.team-item :last-child {
-  margin-right: 0px;
+  & :last-child {
+    margin-right: 0px;
+  }
 }
 
 .team-img {
@@ -66,18 +66,19 @@
   transition-property: background-color, fill;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
 }
-.team-soc-link:hover,
-.team-soc-link:focus {
-  background-color: var(--accent-color);
-}
-.team-soc-link:hover .team-soc-icon {
-  fill: #ffffff;
-}
-.team-soc-link:focus .team-soc-icon {
-  fill: #ffffff;
-}
+
 .team-soc-icon {
   fill: #afb1b8;
   transition: fill var(--transition-duration) var(--transition-timing-function);
+  .team-soc-link:focus & {
+    fill: #ffffff;
+  }
+  .team-soc-link:hover & {
+    fill: #ffffff;
+  }
 }
